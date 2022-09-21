@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Silkscreen', cursive;
+    text-decoration: none;
+    
+    
+
+
+}
+body{
+    background-image: url(/Front/Imagenes/fondo2.jpg);
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+}
+
+.Encabezado_superior{
+    width: 100%;
+    height: 150px;
+    background-image: url(/Front/Imagenes/Fondo.png);
+    
+    
+    
+    
+
+}
+#logopb{
+    width: 250px;
+    margin-left: 200px;
+    position: absolute;
+    left: 70%;
+    top: 0;
+    padding: 0px 20px;
+   
+}
+#Logo{
+    width: 150px;
+    float: left;
+   
+
+    
+
+}
+.titulo{
+    color: rgb(255, 255, 255);
+    
+    
+    
+    
+
+}
+.Encabezado_Barramenu{
+    width: 100%;
+    height: 60px;
+    background: black;
+    padding: 0px 20px;
+   
+
+}
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+nav{
+    height: 100%;
+}
+nav > ul{
+    height: 100%;
+    display: flex;
+
+
+}
+nav ul li{
+    height: 100%;
+    list-style:  none;
+    position: relative;
+}
+
+nav>ul>li>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    color: white;
+    transition: all 300ms ease;
+}
+nav>ul>li>a:hover{
+    transform: scale(1.1);
+    background: gray;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+
+}
+nav>ul>li>ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgba(15, 15, 15, 0.5);
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    transition: all 300ms ease;
+    color: pink;
+    
+
+}
+nav>ul>li:hover>ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px
+
+}
+nav>ul>li>ul>li>a{
+    display: block;
+    color: rgb(70, 111, 158);
+    padding:6px ;
+    padding-left: 14px ;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+    
+    
+
+}
+nav>ul>li>ul>li>a:hover{
+    background: rgb(4, 133, 255) ;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 0px rgba(15, 15, 15, 0.5);
+ 
+}
+nav>ul>li>ul>li>a:active{
+    transform: scale(0.9);
+   
+ 
+}
+.cajat{
+    background-image: url(/Front/Imagenes/Fondo.png);
+    max-width: 1200px;
+    max-height: 100%;
+    
+
+   
+    margin-top: 350px;
+    margin-left: 150px;
+    margin-bottom: 30px;
+    
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 7px 13px 37px #000;
+    
+    
+   
+    
+
+}
+.tabla{
+    
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+
+    
+}
+table{
+    
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    
+    
+
+
+
+}
+th,td{
+    
+    padding: 20px;
+    transition: all 300ms ease;
+    
+    
+}
+
+
+
+tr:hover{
+    transition: all 300ms ease;
+    background: rgb(255, 128, 179);
+    transform: scale(1.1);
+    
+}
+th{
+    background-color: rgb(72, 201, 243);
+    color: #000;
+}
+#linkhistoria{
+    color: rgb(0, 0, 0);
+}
+
+#listadodemascotas{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(255, 128, 179);
+    font-size: 45px;
+    z-index: 0;
+   
+    
+    
+    box-shadow: 7px 15px 0px #000;
+
+    
+}
+
+
+    
+    
+
+
+
+   
+
+
+
+
+

@@ -1,0 +1,143 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaMascotasModel
+@{
+    ViewData["Title"] = "Home page";
+    Layout=null;
+    
+}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/Estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"
+
+
+    
+  <body>
+
+
+    <header>
+        <div class="Encabezado_superior">
+            
+            <div class="Logo">
+                <img id="Logo" src="/Imagenes/perrogato.png" alt="">
+                <br>
+                <h1 class="titulo">Bienvenidos</h1>
+                <h1 class="titulo">Mascota Feliz</h1>
+                <a href=""><img  id="logopb" src="/Imagenes/Logo pb.png" alt=""  ></a>
+               
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+        <div class="Encabezado_Barramenu">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li  ><a href="/Index">Inicio</a> </li>
+                        <li><a href="">Registrar</a>
+                            <ul>
+                                <li><a href="/PagesMascota/CreateMascota">Registrar Mascota</a></li>
+                                <li><a href="/PagesDueno/CreateDueno">Registrar Dueño</a></li>
+                                <li><a href="/PagesVeterinario/CreateVeterinario">Registrar Veterinario</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Consultar</a>
+                            <ul>
+                                <li><a href="/Front/Consulta.html">Buscar Mascota</a></li>
+                                <li><a href="/PagesMascota/ListaMascotas">Mostrar Mascotas</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="">Sobre Nosotros</a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
+
+
+        </div>
+    </header>
+
+    <h1 id="listadodemascotas">Listado de mascotas</h1>
+
+
+
+
+
+
+ 
+    <div class="cajat">
+        <table class="tabla">
+
+            <tr>
+          
+              <th>ID</th>
+          
+              <th>nombre</th>
+          
+              <th>Especie</th>
+
+              <th>Raza</th>
+
+              <th>Color</th>
+
+              
+
+              <th>estado</th>
+              <th>update</th>
+
+          
+            </tr>
+
+            
+            @foreach (var Mascota in Model.ListaMascota)
+            {
+                <tr>
+                    <td>@Mascota.Id</td>
+                    <td>@Mascota.Nombre</td>
+                    <td>@Mascota.Especie</td>
+                    <td>@Mascota.Raza</td>
+                    <td>@Mascota.Color</td>
+                    
+                    <td ><a href="" id="Estado">estado</a></td>
+                    <td ><a asp-page ="/PagesMascota/CreateMascota" id="Estado" asp-route-IdMascota="@Mascota.Id" >update</a></td>
+
+
+                </tr>
+                
+            }
+          
+            
+            
+          
+             
+            
+            
+            
+          
+      
+            
+           
+            
+            
+              
+          
+          </table>
+    </div>
+
+   
+
+    </body>
+
+

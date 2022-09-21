@@ -1,0 +1,186 @@
+*{
+    font-family: 'Silkscreen', cursive;
+    background-image: url('/Imagenes/fondo2.jpg');
+    
+    overflow-y: hidden;
+    
+
+}
+.caja1{
+    width: 300px;
+    height: 280px;
+    background: rgb(0, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; 
+    box-shadow: 7px 13px 37px #000;
+    
+
+
+
+}
+.caja2{
+    width: 300px;
+    height: 450px;
+    background: rgb(238, 181, 216);
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    box-shadow: 7px 13px 37px #000;
+    flex-direction: column;
+    
+    
+    
+
+}
+#perrogato{
+    width: 200px;
+    background: rgb(0, 255, 255) ;
+
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+    
+    
+}
+#titulo{
+    position: absolute;
+    background: rgb(0, 255, 255) ;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.inputtxt{
+    width: 250px;
+    background: rgb(241, 120, 195);
+    padding: 10px;
+    margin: 7px;
+    position: relative;
+    top: 20px;
+    left: 6px;  
+    border-radius: 20px;
+
+}
+#btnRegistrar{
+    width: 300px;
+    background: rgb(241, 120, 195);
+    height: 30px;
+    position: relative;
+    top: 30px;
+    border-radius: 20px;
+    transition: all 300ms ease;
+
+
+}
+#btnRegistrar:hover{
+    background:  rgba(0, 255, 255, 0.274) ;
+
+}
+#btnRegistrar:active{
+    transform: scale(0.9);
+
+}
+
+
+
+#atras{
+    width: 60px;
+    position: absolute;
+    transition: all 300ms ease;
+
+}
+#atras:hover{
+    transform: scale(1.2);
+    
+    
+
+}
+#atras:active{
+    transform: scale(0.8);
+}
+#ya{
+    position: absolute;
+    left: 35px;
+    top: 370px;
+    background: rgb(238, 181, 216);
+    color: black;
+    transition: all 300ms ease;
+
+    
+}
+#ya:hover{
+    transform: scale(1.1);
+    
+    
+
+}
+#ya:active{
+    transform: scale(0.9);
+}
+#combobox{
+    width: 270px;
+    -webkit-appearance: none;
+    text-align: center;
+    transition: all 300ms ease;
+
+    
+
+}
+#combobox:active{ 
+    transform: scale(0.9);
+}
+.caja3{
+    width: 300px;
+    height: 450px;
+    background: rgb(238, 181, 216);
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    box-shadow: 7px 13px 37px #000;
+    flex-direction: column;
+    
+
+}
+.inputtxt2{
+    width: 250px;
+    background: rgb(241, 120, 195);
+    padding: 10px;
+    margin: 8px;
+    margin-top: 20px;
+    position: relative;
+    top: 115px;
+    left: 6px;  
+    border-radius: 20px;
+
+}
+#btnRegistrar2{
+    width: 300px;
+    background: rgb(241, 120, 195);
+    height: 30px;
+    position: relative;
+    top: 140px;
+    border-radius: 20px;
+    transition: all 300ms ease;
+
+
+}
+#btnRegistrar2:hover{
+    background:  rgba(0, 255, 255, 0.274) ;
+
+}
+#btnRegistrar2:active{
+    transform: scale(0.9);
+
+}
+
+
+

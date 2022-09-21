@@ -1,0 +1,90 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.CreateMascotaModel
+@{
+    ViewData["Title"] = "RegisterPet";
+    Layout=null;
+}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegistroMascota </title>
+    <link rel="stylesheet" href="/css/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<a href="/Index" ><img src="/Imagenes/atras.png" id="atras"></a>
+    <div class="caja1">
+        <h1 id="titulo">Registro</h1>
+        <img src="/Imagenes/perrogato.png" id="perrogato">
+
+
+
+
+
+    </div>
+    <form class="caja2" method= "post">
+        <input type="hidden" asp-for="mascota.Id">
+        <input class="inputtxt"  asp-for="mascota.Nombre"  placeholder="Ingrese el nombre ">
+        <input class="inputtxt"  asp-for="mascota.Especie" placeholder="Ingrese la especie ">
+        <input class="inputtxt"  asp-for="mascota.Raza" placeholder="Ingrese la raza ">
+        <input class="inputtxt"  asp-for="mascota.Color" placeholder="Ingrese el color ">
+
+        <!--
+        <select class="inputtxt" id="combobox" asp-for="DuenoID" asp-items="@(new SelectList(Model.ListaDueno, "Id","Nombres" ))" >
+            <option value="">-Seleccionar-</option>
+        </select>
+
+       
+
+         <select class="inputtxt" id="combobox" asp-for="VeterinarioID" asp-items="@(new SelectList(Model.ListaVeterinario, "Id","Nombres"))" >
+            <option value="">-Seleccionar-</option>
+            
+
+
+         </select>
+        -->
+
+        <select class="inputtxt" id="combobox" asp-for="DuenoID" >
+            <option value="-2">- Seleccionar -</option>
+            @foreach (var x in Model.ListaDueno)
+            {
+                <option value="@x.Id">- @x.Nombres @x.Apellidos -</option>
+                
+            }
+
+
+
+        </select>
+
+        <select class="inputtxt" id="combobox" asp-for="VeterinarioID" >
+            <option value="-2">- Seleccionar -</option>
+            @foreach (var x in Model.ListaVeterinario)
+            {
+                <option value="@x.Id">- @x.Nombres @x.Apellidos -</option>
+                
+            }
+
+
+
+        </select>
+
+        
+
+        <button class="boton" id="btnRegistrar" type="submit">Registrar</button>
+
+       
+
+
+
+
+
+
+    </form>
+
+
