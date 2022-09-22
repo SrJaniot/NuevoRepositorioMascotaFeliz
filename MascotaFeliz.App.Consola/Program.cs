@@ -92,7 +92,9 @@ namespace MascotaFeliz.App.Consola
         {
             var Historia=new Historia
             {
-                FechaInicial=new DateTime(2022,2,10)
+                FechaInicial=new DateTime(2022,2,10),
+                
+
             };
             return Historia;
 

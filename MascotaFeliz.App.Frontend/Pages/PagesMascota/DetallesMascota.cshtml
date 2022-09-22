@@ -1,0 +1,41 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.DetallesMascotaModel
+@{
+    Layout=null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASCOTASFELIZ</title>
+    <link rel="stylesheet" href="/css/EstilosVanesa.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E%22%3EW">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="/PagesMascota/ListaMascotas" ><img src="/Imagenes/atras.png" id="atras"></a>
+   
+   <div class="Form">
+    <p>ID: <label> @Model.Mascota.Id </label></p>
+    <p>Nombre: <label>@Model.Mascota.Nombre</label></p>
+    <p>Especie: <label>@Model.Mascota.Especie</label>
+    <p>Raza: <label>@Model.Mascota.Raza</label>
+    <p>Color: <label>@Model.Mascota.Color</label></p>
+    <p>Dueño: <label>@Model.Mascota.Dueno.Nombres @Model.Mascota.Dueno.Apellidos</label></p>
+    <p>Veterinario: <label>@Model.Mascota.Veterinario.Nombres @Model.Mascota.Veterinario.Apellidos</label></p>
+    <p>Historia:  <a asp-page ="/PagesMascota/VerHistoria" id="Estado" asp-route-IdMascota="@Model.Mascota.Id" >Ver Historia</a> </p>
+    
+   </div>
+
+   <div class="Fotomascota">
+    <h2 align="center">MASCOTA</h2>
+    <img src="~/Imagenes/perrogato.png" id="mascota">
+
+   </div>
+    
+</body>
+</html>

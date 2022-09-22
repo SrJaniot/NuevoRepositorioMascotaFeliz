@@ -183,4 +183,22 @@
 }
 
 
+.caja10{
+    width: 300px;
+    height: 600px;
+    background: rgb(238, 181, 216);
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    box-shadow: 7px 13px 37px #000;
+    flex-direction: column;
+    
+    
+    
+
+}
+
+
 

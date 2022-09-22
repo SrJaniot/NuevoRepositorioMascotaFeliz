@@ -8,9 +8,9 @@ namespace MascotaFeliz.App.Dominio
         public String Color {get;set;}
         public String Especie {get;set;}
         public String Raza {get;set;}
-        public Historia Historia {get;set;}
-        public Dueno Dueno {get;set;}
-        public Veterinario Veterinario {get;set;}
+        public  Historia  Historia {get;set;}
+        public  Dueno Dueno {get;set;}
+        public  Veterinario Veterinario {get;set;}
         
         
     }

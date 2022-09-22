@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using MascotaFeliz.App.Dominio;
 using System.Linq;
+using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace MascotaFeliz.App.Persistencia
 {
@@ -40,7 +42,9 @@ namespace MascotaFeliz.App.Persistencia
 
         public Historia GetHistoria(int idhistoria)
         {
-            var HistoriaEncontrada=_appContext.Historias.FirstOrDefault(h=> h.Id== idhistoria);
+            var HistoriaEncontrada=_appContext.Historias
+                                                .Include("VisitasPyP")
+            .                                   FirstOrDefault(h=> h.Id== idhistoria);
             return HistoriaEncontrada;
         }
 
@@ -51,12 +55,43 @@ namespace MascotaFeliz.App.Persistencia
             {
                 HistoriaEncontrada.FechaInicial=historia.FechaInicial;
                 HistoriaEncontrada.VisitasPyP=historia.VisitasPyP;
+                
+                
                 _appContext.SaveChanges();
             }
             return HistoriaEncontrada;
 
 
             
+        }
+        public Historia AgregarVisitaPyP (Historia historia, VisitaPyP visitapyp)
+        {
+            var HistoriaEncontrada=_appContext.Historias.FirstOrDefault(h => h.Id == historia.Id);
+            if (HistoriaEncontrada!=null)
+            {
+                var VisitaPyPEncontrada =_appContext.VisitasPyP.FirstOrDefault(v =>v.Id==visitapyp.Id);
+                if (VisitaPyPEncontrada!=null)
+                {
+                    if (HistoriaEncontrada.VisitasPyP==null)
+                    {
+                        HistoriaEncontrada.VisitasPyP=new List<VisitaPyP>();
+                        HistoriaEncontrada.VisitasPyP.Add(VisitaPyPEncontrada);
+                        _appContext.SaveChanges();
+                    }
+                    else
+                    {
+                        HistoriaEncontrada.VisitasPyP.Add(VisitaPyPEncontrada);
+                        _appContext.SaveChanges();
+
+                    }
+                    
+                
+                   
+
+                } 
+
+            }
+            return  HistoriaEncontrada;
         }
     }
 }

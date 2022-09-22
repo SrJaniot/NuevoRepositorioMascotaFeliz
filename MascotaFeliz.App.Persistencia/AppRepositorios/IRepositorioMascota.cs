@@ -15,6 +15,10 @@ namespace MascotaFeliz.App.Persistencia{
 
         Mascota AsignarVeterinario_A_Mascota (int idmascota,int idveterinario );
 
+        Mascota InsertarVisitaPyP (int idmascota,VisitaPyP visitapyp);
+
+        Historia BuscarIdHistoria(Mascota mascota);
+
 
         
         

@@ -1,60 +1,76 @@
 ﻿@page
-@model MascotaFeliz.App.Frontend.Pages.CreateVeterinarioModel
+@model MascotaFeliz.App.Frontend.Pages.CreateVisitaPyPModel
 @{
-    ViewData["Title"] = "Home page";
-    Layout=null;
     
-
+    Layout=null;
 }
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RegistroMascota </title>
+    <title>RegistroVisitaPyP </title>
     <link rel="stylesheet" href="/css/Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 
 </head>
-<body>
-    <a href="/Index" ><img src="/Imagenes/atras.png" id="atras"></a>
-    <div class="caja1">
-        <h1 id="titulo">Registro</h1>
-        <img src="/Imagenes/perrogato.png" id="perrogato">
+
+
+
+<a href="/Index"><img src="/Imagenes/atras.png" id="atras"></a>
+<div class="caja1">
+    <h1 id="titulo">Registro</h1>
+    <img src="/Imagenes/perrogato.png" id="perrogato">
 
 
 
 
 
-    </div>
-    <form class="caja2" method="post">
-        <input type="hidden" asp-for="veterinario.Id">
-        <input class="inputtxt" asp-for="veterinario.Nombres"   placeholder="Ingrese Nombre ">
-        <input class="inputtxt" asp-for="veterinario.Apellidos"  placeholder="Ingrese el Apellido ">
-        <input class="inputtxt"  asp-for="veterinario.Direccion" placeholder="Ingrese la Direccion ">
-        <input class="inputtxt"  asp-for="veterinario.Telefono"  placeholder="Ingrese el telefono ">
-        <input class="inputtxt"  asp-for="veterinario.TarjetaProfesional" placeholder="Ingrese Tarjeta Profecional ">
-        
-        
+</div>
+<form class="caja10" method="post">
+    <select  class="inputtxt" asp-for="IdMascota">
+        <option value="-2">-Mascota-</option>
+        @foreach (var x in Model.ListaMascota)
+        {
+            <option value="@x.Id">@x.Id @x.Nombre </option>
 
-        <button class="boton" id="btnRegistrar" type="submit">Registrar</button>
+        }
 
-        <a href="/Front/Consulta.html" id="ya">¿Ya estas registrado? </a>
 
-        </form>
+    </select>
+    <select  class="inputtxt" asp-for="visitaPyP.IdVeterinario">
+        <option value="-2">-Veterinario-</option>
+        @foreach (var x in Model.ListaVeterinario)
+        {
+            <option value="@x.Id"> -@x.Nombres @x.Apellidos-</option>
 
-        
-       
-        
-
+        }
 
 
 
-    
-    
+    </select>
+    <input type="hidden" asp-for="visitaPyP.Id">
+    <input class="inputtxt" type="date"  asp-for="visitaPyP.FechaVisita" >
+    <input class="inputtxt"  asp-for="visitaPyP.Temperatura"  placeholder="Ingrese  temperatura ">
+    <input class="inputtxt"  asp-for="visitaPyP.Peso" placeholder="Ingrese  peso ">
+    <input class="inputtxt"  asp-for="visitaPyP.FrecuenciaRespiratoria" placeholder="Ingrese  Frecuencia Respiratoria ">
+    <input class="inputtxt"  asp-for="visitaPyP.FrecuenciaCardiaca" placeholder="Ingrese FrecuenciaCardiaca">
+    <input class="inputtxt"  asp-for="visitaPyP.EstadoAnimo" placeholder="Ingrese EstadoAnimo ">
+    <input class="inputtxt"  asp-for="visitaPyP.Recomendaciones" placeholder="Ingrese .Recomendaciones ">
 
-    
-</body>
 
+
+
+
+
+
+
+
+
+
+
+
+    <button class="boton" id="btnRegistrar" type="submit">Registrar</button>
+</form>

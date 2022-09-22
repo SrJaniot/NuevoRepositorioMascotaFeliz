@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System;
 using MascotaFeliz.App.Dominio;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 
 
@@ -43,7 +44,11 @@ namespace MascotaFeliz.App.Persistencia
 
         public Mascota GetMascota(int IDMascota)
         {
-            var MascotaEncontrada= _appContext.Mascotas.FirstOrDefault(m=>m.Id==IDMascota);
+            var MascotaEncontrada= _appContext.Mascotas
+                                                        .Include("Historia")
+                                                        .Include("Veterinario")
+                                                        .Include("Dueno")
+                                                        .FirstOrDefault(m=>m.Id==IDMascota);
             return MascotaEncontrada;
         }
 
@@ -126,6 +131,35 @@ namespace MascotaFeliz.App.Persistencia
             
             
         }
+        public Mascota InsertarVisitaPyP (int idmascota,VisitaPyP visitapyp)
+        {
+            var mascota=_appContext.Mascotas.FirstOrDefault(m => m.Id==idmascota);
+            if (mascota!=null)
+            {
+                mascota.Historia.VisitasPyP.Add(visitapyp);
+                _appContext.SaveChanges();
+            }
+            return mascota;
+            
+        }
+       
+        public Historia BuscarIdHistoria(Mascota mascota)
+        {
+            var MascotaEncontrada=_appContext.Mascotas.FirstOrDefault(m =>m.Id==mascota.Id);
+            if (MascotaEncontrada!=null)
+            {
+                var HistoriaEncontrada=_appContext.Historias.FirstOrDefault(h => h== MascotaEncontrada.Historia);
+                if (HistoriaEncontrada!=null)
+                {
+                    Console.WriteLine("ENCONTRE LA HISTORIA");
+                    return HistoriaEncontrada;
+                }
+                
+            }
+            Console.WriteLine("No encontre LA HISTORIA");
+            return null;
+        }
+
         
     }
 }

@@ -1,0 +1,52 @@
+body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: url(Imagenes/fondo2.png);
+}
+
+.Form {
+    width: 400px;
+    background: rgb(241, 120, 195);
+    padding: 30px;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Silkscreen';
+    font-style: normal;
+    box-shadow: 7px 13px 37px black;
+    border-radius: 10px;
+    z-index: 45;
+}
+
+p{
+    background-color:  rgb(238, 181, 216);    
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+.Fotomascota {
+    width: 300px;
+    height: 280px;
+    background: rgb(0, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    transform: translate(-50%,-50%);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; 
+    box-shadow: 7px 13px 37px #000;
+    font-family: 'Silkscreen';
+    font-style: normal;
+    
+}
+#mascota {
+    width: 200px;
+    background: rgb(0, 255, 255) ;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+}

@@ -75,6 +75,11 @@ namespace MascotaFeliz.App.Frontend.Pages
             if (mascota.Id>0)
             {
                 _repositorioMascota.UpdateMascota(mascota);
+                _repositorioMascota.AsignarDueno_A_Mascota(mascota.Id,DuenoID);
+                _repositorioMascota.AsignarVeterinario_A_Mascota(mascota.Id,VeterinarioID);
+
+
+
                 return RedirectToPage ("/PagesMascota/ListaMascotas");
                 
             }

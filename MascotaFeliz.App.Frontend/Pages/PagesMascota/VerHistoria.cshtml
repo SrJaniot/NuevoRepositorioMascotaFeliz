@@ -1,5 +1,5 @@
 ﻿@page
-@model MascotaFeliz.App.Frontend.Pages.ListaMascotasModel
+@model MascotaFeliz.App.Frontend.Pages.VerHistoriaModel
 @{
     ViewData["Title"] = "Home page";
     Layout=null;
@@ -69,7 +69,7 @@
         </div>
     </header>
 
-    <h1 id="listadodemascotas">Listado de mascotas</h1>
+    <h1 id="listadodemascotas">-@Model.Mascota.Id- @Model.Mascota.Nombre          Fecha Inicio @Model.Mascota.Historia.FechaInicial</h1>
 
 
 
@@ -82,41 +82,48 @@
 
             <tr>
           
-              <th>ID</th>
+              <th>Fecha</th>
           
-              <th>nombre</th>
+              <th>Veterinario</th>
           
-              <th>Especie</th>
+              <th>Temperatura</th>
 
-              <th>Raza</th>
+              <th>Peso (kg)</th>
 
-              <th>Color</th>
+              <th>Frecuencia Respiratoria</th>
 
               
 
-              <th>estado</th>
-              <th>update</th>
+              <th>Frecuencia Cardiaca</th>
+              <th>Estado de Animo</th>
+              <th>Recomendaciones </th>
 
           
             </tr>
 
-            
-            @foreach (var Mascota in Model.ListaMascota)
+            @foreach (var x in Model.ListaVisitaspyp)
             {
                 <tr>
-                    <td>@Mascota.Id</td>
-                    <td>@Mascota.Nombre</td>
-                    <td>@Mascota.Especie</td>
-                    <td>@Mascota.Raza</td>
-                    <td>@Mascota.Color</td>
-                    
-                    <td ><a  id="Estado" asp-page ="/PagesMascota/DetallesMascota" asp-route-IdMascota="@Mascota.Id">Detalles</a></td>
-                    <td ><a asp-page ="/PagesMascota/CreateMascota" id="Estado" asp-route-IdMascota="@Mascota.Id" >update</a></td>
-
+                    <td>@x.FechaVisita</td>
+                    <td>@Model.Mascota.Veterinario.Nombres @Model.Mascota.Veterinario.Apellidos</td>
+                    <td>@x.Temperatura</td>
+                    <td>@x.Peso</td>
+                    <td>@x.FrecuenciaRespiratoria</td>
+                    <td>@x.FrecuenciaCardiaca</td>
+                    <td>@x.EstadoAnimo</td>
+                    <td>@x.Recomendaciones</td>
 
                 </tr>
+
+                
+
                 
             }
+
+            
+          
+                
+           
           
             
             
