@@ -1,5 +1,5 @@
 ﻿@page
-@model MascotaFeliz.App.Frontend.Pages.ListaVeterinarioModel
+@model MascotaFeliz.App.Frontend.Pages.CreditosModel
 @{
      Layout=null;
 }
@@ -67,8 +67,7 @@
 
         </div>
     </header>
-
-    <h1 id="listadodemascotas">Listado de Veterinario</h1>
+    <h1 id="listadodemascotas">developed by</h1>
 
 
 
@@ -80,43 +79,40 @@
         <table class="tabla">
 
             <tr>
-          
-              <th>ID</th>
-          
               <th>nombre</th>
-          
-              <th>Apellido</th>
-
-              <th>Telefono</th>
-
-              <th>Dirección</th>
-
+              <th>Contacto</th>
+              <th>Discord</th>
+              <th>Git</th>
               
-
-              <th>TarjetaProfesional</th>
-              <th>update</th>
-
-          
+            </tr>
+            <tr class="Esteban">
+                <td>Esteban Francisco Janiot Rivera</td>
+                <td>estebanjaniot10@gmail.com      (+57)3152901731 </td>
+                <td>EstebanJaniot#5709</td>
+                <td>SrJaniot</td>
+            </tr>
+            <tr class="Esteban">
+                <td>Vanessa Sanabria Alvarez</td>
+                <td>wafer0210@outlook.com       (+57)3184644152</td>
+                <td>xVane#2315</td>
+                <td>SraJaniot</td>
+            </tr>
+            <tr >
+                <td>Christian Torres</td>
+                <td>christianalexis399@gmail.com</td>
+                <td>Halomip#6029</td>
+                <td>Halomip</td>
+            </tr>
+            <tr >
+                <td>Maria Puerta</td>
+                <td>maria.puerta.sala@gmail.com</td>
+                <td>mariaPuerta#6683</td>
+                <td>mariapuertasalas</td>
             </tr>
 
             
-            @foreach (var x in Model.ListaVeterinario)
-            {
-                <tr>
-                    <td>@x.Id</td>
-                    <td>@x.Nombres</td>
-                    <td>@x.Apellidos</td>
-                    <td>@x.Telefono</td>
-                    <td>@x.Direccion</td>
-                    <td>@x.TarjetaProfesional</td>
-                    
-                    
-                    <td ><a asp-page ="/PagesVeterinario/CreateVeterinario" id="Estado" asp-route-veterinarioID="@x.Id" >update</a></td>
-
-
-                </tr>
-                
-            }
+          
+            
           
             
             
@@ -139,5 +135,6 @@
    
 
     </body>
+
 
 

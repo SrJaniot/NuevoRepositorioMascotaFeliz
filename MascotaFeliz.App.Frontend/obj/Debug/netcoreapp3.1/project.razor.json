@@ -14467,6 +14467,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Pages\\Burger\\Creditos.cshtml",
+      "TargetPath": "Pages\\Burger\\Creditos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"

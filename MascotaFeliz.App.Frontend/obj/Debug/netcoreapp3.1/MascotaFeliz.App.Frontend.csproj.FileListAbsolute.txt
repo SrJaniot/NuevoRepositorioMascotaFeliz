@@ -90,3 +90,4 @@ C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\R
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\PagesMascota\DetallesMascota.cshtml.g.cs
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\PagesMascota\VerHistoria.cshtml.g.cs
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\PagesMascota\BuscarMascota.cshtml.g.cs
+C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Burger\Creditos.cshtml.g.cs

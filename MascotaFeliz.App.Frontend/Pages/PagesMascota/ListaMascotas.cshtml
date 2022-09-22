@@ -19,21 +19,20 @@
   <body>
 
 
-    <header>
+     <header>
         <div class="Encabezado_superior">
             
             <div class="Logo">
-                <img id="Logo" src="/Imagenes/perrogato.png" alt="">
+              
+                <img id="Logo" src="~/Imagenes/perrogato.png" alt="">
+
                 <br>
                 <h1 class="titulo">Bienvenidos</h1>
                 <h1 class="titulo">Mascota Feliz</h1>
-                <a href=""><img  id="logopb" src="/Imagenes/Logo pb.png" alt=""  ></a>
+                <a href="/Burger/Creditos"><img  id="logopb" src="~/Imagenes/Logo pb.png" alt=""  ></a>
                
 
             </div>
-
-
-
 
 
         </div>
@@ -53,12 +52,14 @@
                         </li>
                         <li><a href="">Consultar</a>
                             <ul>
-                                <li><a href="/Front/Consulta.html">Buscar Mascota</a></li>
+                                <li><a href="/PagesMascota/BuscarMascota">Buscar Mascota</a></li>
                                 <li><a href="/PagesMascota/ListaMascotas">Mostrar Mascotas</a></li>
+                                <li><a href="/PagesDueno/ListaDuenos">Mostrar Duenos</a></li>
+                                <li><a href="/PagesVeterinario/ListaVeterinario">Mostrar Veterinarios</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="">Sobre Nosotros</a></li>
+                        <li><a href="/PagesVisitaPyP/CreateVisitaPyP">VisitaPyP</a></li>
                     </ul>
                 </nav>
 
@@ -100,6 +101,25 @@
           
             </tr>
 
+            @if (@Model.Mascota!=null)
+            {
+                <tr>
+                    <td>@Model.Mascota.Id</td>
+                    <td>@Model.Mascota.Nombre</td>
+                    <td>@Model.Mascota.Especie</td>
+                    <td>@Model.Mascota.Raza</td>
+                    <td>@Model.Mascota.Color</td>
+                    
+                    <td ><a  id="Estado" asp-page ="/PagesMascota/DetallesMascota" asp-route-IdMascota="@Model.Mascota.Id">Detalles</a></td>
+                    <td ><a asp-page ="/PagesMascota/CreateMascota" id="Estado" asp-route-IdMascota="@Model.Mascota.Id" >update</a></td>
+
+
+                </tr>
+                
+            }
+            else {
+           
+                
             
             @foreach (var Mascota in Model.ListaMascota)
             {
@@ -119,7 +139,7 @@
             }
           
             
-            
+            }
           
              
             

@@ -13,6 +13,8 @@ namespace MascotaFeliz.App.Frontend.Pages
     {
         private readonly IRepositorioMascota _repositorioMascota;
         public IEnumerable<Mascota> ListaMascota {get;set;}
+        public List<Mascota> ListaMascota2 {get;set;}
+        public Mascota Mascota{get;set;}
 
         public ListaMascotasModel()
         {
@@ -24,8 +26,12 @@ namespace MascotaFeliz.App.Frontend.Pages
         
 
 
-        public void OnGet()
+        public void OnGet(int? IdMascota)
         {
+            if (IdMascota.HasValue)
+            {
+             Mascota=_repositorioMascota.GetMascota(IdMascota.Value); 
+            }
             ListaMascota=_repositorioMascota.GetAllMascotas();
         }
     }
